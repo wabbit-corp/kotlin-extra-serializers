@@ -11,7 +11,7 @@ import java.time.LocalDateTime
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 
-object ZonedDateTimeSerializer : KSerializer<ZonedDateTime> {
+class ZonedDateTimeSerializer : KSerializer<ZonedDateTime> {
     override val descriptor = PrimitiveSerialDescriptor("ZonedDateTime", PrimitiveKind.STRING)
 
     override fun serialize(encoder: Encoder, value: ZonedDateTime) {
@@ -25,7 +25,7 @@ object ZonedDateTimeSerializer : KSerializer<ZonedDateTime> {
     }
 }
 
-object InstantSerializer : KSerializer<Instant> {
+class InstantSerializer : KSerializer<Instant> {
     override val descriptor = PrimitiveSerialDescriptor("Instant", PrimitiveKind.STRING)
 
     override fun serialize(encoder: Encoder, value: Instant) {
@@ -38,7 +38,7 @@ object InstantSerializer : KSerializer<Instant> {
     }
 }
 
-object LocalDateTimeSerializer : KSerializer<LocalDateTime> {
+class LocalDateTimeSerializer : KSerializer<LocalDateTime> {
     override val descriptor = PrimitiveSerialDescriptor("LocalDateTime", PrimitiveKind.STRING)
 
     override fun serialize(encoder: Encoder, value: LocalDateTime) {
